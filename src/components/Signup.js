@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import './L.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function Login() {
+export default function Signup() {
 
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    navigate('/Signup')
-  };
+
 
   const [isCloselogin, setCloselogin] = useState(true);
 
@@ -19,7 +17,10 @@ export default function Login() {
     setCloselogin(!isCloselogin);
     navigate('/');
   };
-
+  const handleLogin = () => {
+    navigate('/login')
+  };
+  
   return (
     <div style={{
       display: 'flex',
@@ -32,8 +33,12 @@ export default function Login() {
       {isCloselogin && (
         <div className="form-container">
           <button className="btn-close" type="button" onClick={handleCloseClick}>X</button>
-          <p className="title">Login</p>
+          <p className="title">Signup</p>
           <form className="form">
+            <div className="input-group">
+              <label htmlFor="Email">Email</label>
+              <input type="text" name="Email" id="Email" placeholder="" />
+            </div>
             <div className="input-group">
               <label htmlFor="username">Username</label>
               <input type="text" name="username" id="username" placeholder="" />
@@ -69,8 +74,8 @@ export default function Login() {
               </svg>
             </button>
           </div>
-          <p className="Signup">Don't have an account?
-            <a rel="noopener noreferrer" href="#" className="" onClick={handleLogin}>Sign up</a>
+          <p  className="login mx-2">Return to Login page
+            <a rel="noopener noreferrer" href="#" className="" onClick={handleLogin}>Login</a>
           </p>
         </div>
       )}</div>
