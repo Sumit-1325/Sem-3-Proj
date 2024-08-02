@@ -1,0 +1,6 @@
+.home-page {
+    height: 100vh;
+    background-image: url('./nature.jpg'); /* Replace with your image path */
+    background-repeat: no-repeat;
+    background-size: cover;
+}

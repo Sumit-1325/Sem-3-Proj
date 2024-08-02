@@ -17,7 +17,7 @@ export default function Login() {
   const handleCloseClick = () => {
     // Toggle the visibility of the login page
     setCloselogin(!isCloselogin);
-    navigate('/');
+    navigate('/Home');
   };
 
   return (

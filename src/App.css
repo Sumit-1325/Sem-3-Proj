@@ -13,7 +13,9 @@
   color: white;         /* Change color to white */
   cursor: pointer;
 }
-
+.btn-close :hover{
+  color: red;
+}
 
 
 
