@@ -1,6 +1,32 @@
+
+ .center-container{
+    color: #fbfcfb;
+    position:absolute;
+    top:38%;
+    left:8%;
+    transform: translateY(-50%);
+    z-index: 2;
+ }
+
+.centered-span {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
 .home-page {
+    display: flex;
     height: 100vh;
-    background-image: url('./nature.jpg'); /* Replace with your image path */
-    background-repeat: no-repeat;
+    width: 100vw;
+    background-image: url("background.png");
+    /* background-color: rgba(255, 255, 255, 0.5); */
     background-size: cover;
+    align-items: center;
+    padding-left: 20vw;
+}
+
+.welcome-text {
+    font-size: 6rem; /* Adjust this value to increase the text size */
+    font-weight: bold;
+    color: white;
 }

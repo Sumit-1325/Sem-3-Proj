@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './L.css';
 import { useNavigate } from 'react-router-dom';
-
+import { RemoveScrollBar } from 'react-remove-scroll-bar';
 export default function Login() {
 
   const navigate = useNavigate();
@@ -17,30 +17,30 @@ export default function Login() {
   const handleCloseClick = () => {
     // Toggle the visibility of the login page
     setCloselogin(!isCloselogin);
-    navigate('/Home');
+    navigate('/');
   };
 
   return (
-    <div style={{
+    <>
+    <RemoveScrollBar  />
+    <div  className="project" style={{
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       height: '100vh',
-      margin: '0'
+      margin: '0',
     }}>
 
       {isCloselogin && (
-        <div className="form-container">
+        <div className="form-container" >
           <button className="btn-close" type="button" onClick={handleCloseClick}>X</button>
           <p className="title">Login</p>
           <form className="form">
             <div className="input-group">
-              <label htmlFor="username">Username</label>
-              <input type="text" name="username" id="username" placeholder="" />
+              <input type="text" name="username" id="username" placeholder="Username" />
             </div>
             <div className="input-group">
-              <label htmlFor="password">Password</label>
-              <input type="password" name="password" id="password" placeholder="" />
+              <input type="password" name="password" id="password" placeholder="Password" />
               <div className="forgot">
                 <a rel="noopener noreferrer" href="#">Forgot Password?</a>
               </div>
@@ -74,6 +74,7 @@ export default function Login() {
           </p>
         </div>
       )}</div>
+      </>
 
   );
 }

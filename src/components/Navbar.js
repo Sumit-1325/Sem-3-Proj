@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
 
-    <div>
+    <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="#">Navbar</Link>
@@ -21,10 +21,10 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="Home">Home</Link>
+                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="#">Link</Link>
+                <Link className="nav-link" to="Lostitem">Report Lost items</Link>
               </li>
               <li className="nav-item dropdown">
                 <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,7 +45,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+    </>
 
   )
 }
