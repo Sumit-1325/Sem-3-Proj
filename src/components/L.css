@@ -1,8 +1,9 @@
 .project{
   background-image: url("background.png");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
 }
+  
 
    .form-container {
     

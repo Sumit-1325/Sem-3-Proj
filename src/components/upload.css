@@ -1,0 +1,65 @@
+.upload-form {
+    padding-left: 40vw;
+    align-items: center;
+    margin-top: 5vh;
+}
+.ll{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /* background-color: lightgray; */
+  }
+
+  label {
+    flex: 1;
+    padding-left: 8%;
+  }
+  
+  select, textarea, input[type="text"], input[type="tel"],input[type="date"] {
+    flex: 2;
+    width: 100%;
+    padding: 1vw;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    height: 100%; /* Adjust the height as needed */
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+
+.height {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed black; 
+    height: 200px;
+    width: 500px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.input-field{
+    visibility: hidden;
+}
+
+.uploaded-row{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: #e9f0ff;
+    width: 57%;
+
+}
+.upload-content{
+    display: flex;
+    align-items: center;
+}

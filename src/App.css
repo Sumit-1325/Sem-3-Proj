@@ -1,4 +1,13 @@
 /* App.css */
+
+body{
+   background: linear-gradient(to right, #20d3fc, #726afb); 
+   
+}
+  
+
+
+
 .form-container {
   position: relative;
 }

@@ -14,7 +14,7 @@ export default function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="#">Navbar</Link>
+          <Link className="navbar-brand" to="#">FindMyStuff</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -26,20 +26,13 @@ export default function Navbar() {
               <li className="nav-item">
                 <Link className="nav-link" to="Lostitem">Report Lost items</Link>
               </li>
-              <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </Link>
-                <ul className="dropdown-menu">
-                  <li><Link className="dropdown-item" to="#">Action</Link></li>
-                  <li><Link className="dropdown-item" to="#">Another action</Link></li>
-                  <li><hr className="dropdown-divider" /></li>
-                  <li><Link className="dropdown-item" to="#">Something else here</Link></li>
-                </ul>
+              <li className="nav-item">
+                <Link className="nav-link" to="founditem">Report Found Items</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link disabled" aria-disabled="true">Disabled</Link>
+                <Link className="nav-link" to="feed">Founditems List</Link>
               </li>
+             
             </ul>
             <button className="btn btn-outline-primary " onClick={handleLogin}>Login</button>
           </div>

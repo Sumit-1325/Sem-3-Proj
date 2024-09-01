@@ -1,0 +1,13 @@
+.card-body{
+    background-color: rgb(239, 244, 241);
+    color: rgb(53, 18, 227);
+}
+.heading{
+    text-align: center;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5vh;
+    gap: 5vw;
+}

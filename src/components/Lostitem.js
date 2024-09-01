@@ -3,8 +3,9 @@ import './Lostitem.css';
 export default function Lostitem() {
   return (
     <>
+<div className='lost'>
       <div>
-        <h1 style={{ textAlign: 'center' }}>Report Lost Item Here ...</h1>
+        <h1 style={{ textAlign: 'center',color:"black" }}>Report Lost Item Here ...</h1>
       </div>
       <div>
         <form>
@@ -40,7 +41,7 @@ export default function Lostitem() {
     pattern="[0-9]{10}" 
     title="Please enter a 10-digit phone number"
     required 
-  />
+    />
         </div>
         <div className='line'>
         <label htmlFor="Lostplace"><h3>Where Do Think  You Lost:</h3></label>
@@ -53,10 +54,11 @@ export default function Lostitem() {
       </div>
       <div class=" MRTS col-12">
     <button class="btn btn-primary btn-lg" type="submit">Submit</button>
-    <button class="btn btn-primary btn-lg mx-3" type="reset"> Reset </button>
+    <button class="btn btn-primary btn-lg mx-3" type="reset "> Reset </button>
     </div>
     </form>
   </div>
+    </div>
     </>
   );
 }

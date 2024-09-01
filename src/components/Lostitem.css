@@ -1,26 +1,31 @@
 .MRTS{
   display:flex;
-  padding-left: 6vw;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  
 }
-
-
+ 
 
 .container {
     display: flex;
     flex-direction: column;
     width: 90%;
-    background-color: lightgray;
+    /* background-color: lightgray; */
   }
   
   .line {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    background-color: lightgray;
+    background: linear-gradient(to right, #20d3fc, #726afb);
+
+    /* background-color: lightgray; */
   }
   
   label {
     flex: 1;
+    color: black;
   }
   
   select, textarea, input[type="text"], input[type="tel"],input[type="date"] {
@@ -28,6 +33,7 @@
     width: 100%;
     padding: 1vw;
     box-sizing: border-box;
+    
   }
   
   textarea {
