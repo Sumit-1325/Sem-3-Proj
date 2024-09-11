@@ -1,8 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
+
+  
+
+
   const navigate = useNavigate();
 
   const handleLogin = () => {
@@ -31,6 +35,9 @@ export default function Navbar() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="feed">Founditems List</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="Postitem">Post item</Link>
               </li>
              
             </ul>

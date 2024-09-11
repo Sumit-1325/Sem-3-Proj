@@ -1,0 +1,28 @@
+.outer {
+    position: absolute;
+    /* top: 60px;  */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: auto;
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+    
+  }
+  
+   .inner{
+
+    background-color: #fff;
+    background: rgb (255, 255, 255);
+    padding: 5% 5%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width:70%;
+    border: 2px solid black;
+    
+  } 
+  
+  

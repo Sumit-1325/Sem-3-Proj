@@ -34,12 +34,12 @@ export default function Uploadpage() {
     />
         </div>     
    </div>
-   </form>
+   
     <div className=" upload-form">
         <div>
     <label htmlFor="upload"><h3>Upload pic of Object Found :</h3></label>
     </div>
-      <form  className='height'
+      <div  className='height'
       onClick={() => document.querySelector(".input-field").click()}
       >
         <input type="file" accept="image/*" className='input-field' onChange={({ target: {files}}) => {
@@ -55,7 +55,7 @@ export default function Uploadpage() {
         <MdCloudUpload color='black' size={60}/>
         <p>Browse Files To Upload</p>
         </>}
-      </form>
+      </div>
       
       <section className='uploaded-row'>
         <AiFillFileImage color='black' />
@@ -71,6 +71,7 @@ export default function Uploadpage() {
     
       </section>
     </div>
+    </form>
             </div>
     
     

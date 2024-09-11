@@ -1,10 +1,26 @@
 /* App.css */
 
-body{
-   background: linear-gradient(to right, #20d3fc, #726afb); 
-   
-}
-  
+ body{ 
+   /* background: linear-gradient(to right, #20d3fc, #726afb);  */
+/* background-color: #c6c4d6; */
+/* background-color:#d3dce7; */
+ /* background: linear-gradient(to right,white,#c6c4d6 ); */
+ /* background-color: #ede7ff; */
+ /* background-color: #8667f2; */
+ /* background: linear-gradient(171deg,#f0f0f0 0%, #ede7ff 90%); */
+
+ 
+ background-color: #F1F1F1;
+} 
+/* .card{
+  transition: 1s;
+}  
+
+.card:hover{
+  transform: scale(1.2);
+  z-index: 2;
+} */
+
 
 
 
