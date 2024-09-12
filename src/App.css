@@ -12,16 +12,36 @@
  
  background-color: #F1F1F1;
 } 
-/* .card{
+
+/*catories csss */
+
+.Difix{
+display: flex;
+margin:1% ;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-color: #f44336;
+  text-decoration-thickness: 2px; 
+  text-underline-offset: 4px; 
+}
+
+
+
+
+.HH{
   transition: 1s;
 }  
 
-.card:hover{
+.HH:hover{
   transform: scale(1.2);
   z-index: 2;
-} */
+} 
 
 
+
+/*normal css */
 
 
 .form-container {

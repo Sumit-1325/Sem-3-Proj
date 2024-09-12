@@ -4,7 +4,7 @@ import Card from './Card';
 
 export default function Content() {
   return (
-    <div className="container">
+    <div className="container ">
       <Card 
         image={'https://smallimg.pngkey.com/png/small/4-44913_plus-sign-clipart-blue-plus-sign.png'} 
         title="PostItem" 
