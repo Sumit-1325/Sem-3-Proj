@@ -1,5 +1,5 @@
 import React from 'react'
-import './Click.css';
+import './styles/Click.css';
 export default function Click(props) {
   return (
     <div>

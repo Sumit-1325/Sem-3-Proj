@@ -10,7 +10,7 @@ export default function Card(props) {
           </div>
           <h5 className="card-title">{props.title}</h5>
           <p className="card-text">{props.content_text}</p>
-          <a href="#" className="btn btn-primary">{props.go}</a>
+          <a href="#" className="btn btn-primary" onClick={props.work}>{props.go}</a>
         </div>
       </div>
     </div>

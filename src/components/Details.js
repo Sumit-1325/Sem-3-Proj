@@ -1,5 +1,5 @@
 import React from 'react';
-import './Details.css'
+import './styles/Details.css'
 export default function Details(props) {
   return (
     <div>

@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css"
-import './Postitem.css';
+import './styles/Postitem.css'
 import { MdCloudUpload, MdDelete } from 'react-icons/md'
 import { AiFillFileImage } from "react-icons/ai";
-import'./upload.css'
+import'./styles/upload.css'
 
 export default function PostItems() {
 

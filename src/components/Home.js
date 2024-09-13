@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './styles/styles.css';
 import Click from './Click';
 import { useNavigate } from 'react-router-dom';
 function Home() {

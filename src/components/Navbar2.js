@@ -3,7 +3,13 @@ import './styles/Navbar2.css'
 import Content from './Content';
 import Catories from './Catories';
 import Recentlost from './Recentlost'
+import { Link } from 'react-router-dom';
+
+
 function App() {
+
+  
+
   const [navlinks, setnavlinks] = useState('-200px');
 
   const menu = () => {
@@ -17,11 +23,10 @@ function App() {
         <div className="nav-links" id='navLinks' style={{ left: navlinks }}>
           <i className="fa fa-times" onClick={menu}></i>
           <ul>
-            <li><a href=''>Home</a></li>
-            <li><a href=''>Report Lost Items</a></li>
-            <li><a href=''>Report Found Items</a></li>
-            <li><a href=''>Report Found Items</a></li>
-            <li><a href=''>Postitems</a></li>
+            <li><Link to="Home"  >Home</Link></li>
+            <li><Link to="founditem"> Found Items</Link></li>
+            <li><Link to="reportfditem">Report Found Items</Link></li>
+            <li><Link to="postitem" >Postitems</Link></li>
           </ul>
         </div>
         <i className="fa fa-bars" onClick={menu}></i>
@@ -29,7 +34,7 @@ function App() {
       <div className="text-box">
         <h1>Something Lost ??</h1>
         <p>We help our users to find their things they lost.</p>
-        <a href='' className='hero-btn'>Visit To Know More</a>
+        <Link to="" className='hero-btn'>Visit To Know More</Link>
       </div>
     </section>
     <Content className="my-5"/>
@@ -45,7 +50,7 @@ function App() {
     <Catories image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
     <Catories image={'https://security.si.edu/sites/default/files/inline-images/lostandfound.png'} content_text="Others Items"/>
     </div>
-    <h1 style={{ textAlign: "center", color: "#000" }} className="underline  my-5">RECENT LOST</h1>
+    <h1 style={{ textAlign: "center", color: "#000" }} className="underline  my-2">RECENT LOST</h1>
     <div className='Difix'>
       <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
       <Recentlost image={'https://security.si.edu/sites/default/files/inline-images/lostandfound.png'} content_text="Others Items"/>
@@ -58,7 +63,7 @@ function App() {
       <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
       <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
       </div>
-      <h1 style={{ textAlign: "center", color: "#000" }} className="underline  my-5">All LOST</h1>
+      <h1 style={{ textAlign: "center", color: "#000" }} className="underline  my-2">All LOST</h1>
       <div className='Difix'>
       <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
       <Recentlost image={'https://security.si.edu/sites/default/files/inline-images/lostandfound.png'} content_text="Others Items"/>

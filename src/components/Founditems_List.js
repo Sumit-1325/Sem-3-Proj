@@ -1,6 +1,6 @@
 import React from 'react'
 import Details from './Details'
-import './Details.css'
+import './styles/Details.css'
 
 export default function Founditems_List() {
   return (
