@@ -2,15 +2,18 @@ import React, { useState } from 'react';
 import './styles/L.css';
 import { useNavigate } from 'react-router-dom';
 import { RemoveScrollBar } from 'react-remove-scroll-bar';
+import axios from 'axios';
 export default function Signup() {
 
   const navigate = useNavigate();
-
-
-
   const [isCloselogin, setCloselogin] = useState(true);
+  const [formData, setFormData] = useState({
+    email: '',
+    username: '',
+    password: ''
+  });
 
-  console.log('Button clicked!'); // Check if this log appears in the console
+
 
   const handleCloseClick = () => {
     // Toggle the visibility of the login page
@@ -19,6 +22,32 @@ export default function Signup() {
   };
   const handleLogin = () => {
     navigate('/login')
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response =  await axios.post('http://127.0.0.1:8000/api/user/register/',formData, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });      
+      if (response.status===201) {
+        navigate('/login');
+      } else {
+        console.error('Signup failed');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
   
   return (
@@ -32,23 +61,23 @@ export default function Signup() {
       <RemoveScrollBar />
 
       {isCloselogin && (
-        <div className="form-container">
+        <div className="form-container" >
           <button className="btn-close" type="button" onClick={handleCloseClick}>X</button>
           <p className="title">Signup</p>
-          <form className="form">
+          <form className="form" method='post' onSubmit={handleSubmit} >
             <div className="input-group">
-              <input type="Email" name="Email" id="Email" placeholder="Email" />
+              <input type="email" name="email" id="email" placeholder="Email"  value={formData.email} onChange={handleChange} />
             </div>
             <div className="input-group">
-              <input type="text" name="username" id="username" placeholder="Username" />
+              <input type="text" name="username" id="username" placeholder="Username"  value={formData.username} onChange={handleChange}/>
             </div>
             <div className="input-group">
-              <input type="password" name="password" id="password" placeholder="Password" />
+              <input type="password" name="password" id="password" placeholder="Password"  value={formData.password} onChange={handleChange} />
               <div className="forgot">
                 <a rel="noopener noreferrer" href="#">Forgot Password?</a>
               </div>
             </div>
-            <button className="sign">Sign in</button>
+            <button type='submit' className="sign">Sign in</button>
           </form>
           <div className="social-message">
             <div className="line"></div>

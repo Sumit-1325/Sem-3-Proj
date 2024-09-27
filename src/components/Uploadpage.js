@@ -106,8 +106,8 @@ border-radius: 5px;
                 </span>
               </section>
 
-              <button class="btn btn-primary btn-lg my-4" type="submit">Submit</button>
-              <button class="btn btn-primary btn-lg mx-5" type="reset "> Reset </button>
+              <button className="btn btn-primary btn-lg my-4" type="submit">Submit</button>
+              <button className="btn btn-primary btn-lg mx-5" type="reset "> Reset </button>
             </div>
 
           </form>

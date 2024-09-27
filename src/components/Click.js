@@ -3,7 +3,7 @@ import './styles/Click.css';
 export default function Click(props) {
   return (
     <div>
-<button class="Btn" onClick={props.handleLogin||props.handleSignup} >
+<button className="Btn" onClick={props.handleLogin||props.handleSignup} >
   {props.Click} 
 </button>
       

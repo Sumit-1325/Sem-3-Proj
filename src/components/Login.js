@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './styles/L.css';
-import { useNavigate } from 'react-router-dom';
+import { Route, useNavigate } from 'react-router-dom';
 import { RemoveScrollBar } from 'react-remove-scroll-bar';
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '../constant';
+import api from '../api';
 export default function Login() {
 
   const navigate = useNavigate();
@@ -11,8 +13,20 @@ export default function Login() {
   };
 
   const [isCloselogin, setCloselogin] = useState(true);
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
 
-  console.log('Button clicked!'); // Check if this log appears in the console
+  const handleSubmit = async (e) =>{
+    e.preventDefault()
+    try{
+      const res = await api.post('api/token/',{username,password})
+      localStorage.setItem(ACCESS_TOKEN,res.data.access)
+      localStorage.setItem(REFRESH_TOKEN,res.data.refresh)
+      navigate('/')
+    }catch(error){
+      alert(error)
+    }
+  }
 
   const handleCloseClick = () => {
     // Toggle the visibility of the login page
@@ -35,17 +49,17 @@ export default function Login() {
         <div className="form-container" >
           <button className="btn-close" type="button" onClick={handleCloseClick}>X</button>
           <p className="title">Login</p>
-          <form className="form">
+          <form className="form" method='post' onSubmit={handleSubmit}>
             <div className="input-group">
-              <input type="text" name="username" id="username" placeholder="Username" />
+              <input type="text" name="username" id="username" placeholder="Username"  value={username} onChange={(e)=>{setUsername(e.target.value)}}/>
             </div>
             <div className="input-group">
-              <input type="password" name="password" id="password" placeholder="Password" />
+              <input type="password" name="password" id="password" placeholder="Password"  value={password} onChange={(e)=>{setPassword(e.target.value)}} />
               <div className="forgot">
                 <a rel="noopener noreferrer" href="#">Forgot Password?</a>
               </div>
             </div>
-            <button className="sign">Sign in</button>
+            <button type='submit' className="sign">Log in</button>
           </form>
           <div className="social-message">
             <div className="line"></div>
