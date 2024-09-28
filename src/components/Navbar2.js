@@ -4,33 +4,16 @@ import Content from './Content';
 import Catories from './Catories';
 import Recentlost from './Recentlost'
 import { Link } from 'react-router-dom';
-
+import Navbar from './Navbar';
 
 function App() {
 
-  
-
-  const [navlinks, setnavlinks] = useState('-200px');
-
-  const menu = () => {
-    setnavlinks(prev => (prev === '-200px' ? '0px' : '-200px'));
-  };
 
   return (
     <>
     <section className='header'>
-      <nav>
-        <div className="nav-links" id='navLinks' style={{ left: navlinks }}>
-          <i className="fa fa-times" onClick={menu}></i>
-          <ul>
-            <li><Link to="Home"  >Home</Link></li>
-            <li><Link to="founditem"> Found Items</Link></li>
-            <li><Link to="reportfditem">Report Found Items</Link></li>
-            <li><Link to="postitem" >Postitems</Link></li>
-          </ul>
-        </div>
-        <i className="fa fa-bars" onClick={menu}></i>
-      </nav>
+      
+      <Navbar/>
       <div className="text-box">
         <h1>Something Lost ??</h1>
         <p>We help our users to find their things they lost.</p>

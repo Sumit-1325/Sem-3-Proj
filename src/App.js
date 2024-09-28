@@ -6,11 +6,13 @@ import Navbar2 from './components/Navbar2';
 import Login from './components/Login';
  import Signup from './components/Signup';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
- import Home from './components/Home';
+//  import Home from './components/Home';
  import Uploadpage from './components/Uploadpage';
  import Founditems_List from './components/Founditems_List';
  import PostItems from './components/PostItems';
  import ProtectedRoute from './components/protectedroutes';
+ import Frontpage from './components/Frontpage';
+import LearnMore from './components/LearnMore';
 
 function Logout(){
   localStorage.clear()
@@ -39,13 +41,16 @@ export default function App() {
          {/* <Navbar /> */}
         
         <Routes>
-        <Route path="/" element={<Navbar2/>}/>
-         <Route path="Home" element={ <ProtectedRoute> <Home /> </ProtectedRoute> } /> 
-          <Route path="login" element={<Login />} /> 
-          <Route path="Signup" element={<Signup />} /> 
-         <Route path="reportfditem" element={ <ProtectedRoute> <Uploadpage/> </ProtectedRoute> } /> 
-         <Route path="founditem" element={ <ProtectedRoute> <Founditems_List/> </ProtectedRoute> }/>  
-        <Route path="postitem" element={ <ProtectedRoute> <PostItems/> </ProtectedRoute> }/>  
+        <Route path="/" element={<Frontpage/>}/>
+        <Route path='/Home' element={<Navbar2/>}></Route>
+        
+         {/* <Route path="Home" element={ <ProtectedRoute> <Home /> </ProtectedRoute> } />  */}
+          <Route path="/login" element={<Login />} /> 
+          <Route path="/Signup" element={<Signup />} /> 
+         <Route path="/reportfditem" element={ <ProtectedRoute> <Uploadpage/> </ProtectedRoute> } /> 
+         <Route path="/founditem" element={ <ProtectedRoute> <Founditems_List/> </ProtectedRoute> }/>  
+        <Route path="/postitem" element={ <ProtectedRoute> <PostItems/> </ProtectedRoute> }/>  
+        <Route path="/learnmore" element={<LearnMore />} /> 
 {/* 
           <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />   */}

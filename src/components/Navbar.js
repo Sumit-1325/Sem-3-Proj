@@ -1,51 +1,20 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import './styles/Navbar2.css'
 
 export default function Navbar() {
-
-  
-
-
-  const navigate = useNavigate();
-
-  const handleLogin = () => {
-    navigate('/login');
-  };
-
   return (
-
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="#">FindMyStuff</Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="Lostitem">Report Lost items</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="founditem">Report Found Items</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="feed">Founditems List</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="Postitem">Post item</Link>
-              </li>
-             
-            </ul>
-            <button className="btn btn-outline-primary " onClick={handleLogin}>Login</button>
-          </div>
+     <nav>
+        <div className="nav-links" id='navLinks' >
+          <ul>
+            <li><Link to="/Home"  >Home</Link></li>
+            <li><Link to="/founditem"> Found Items</Link></li>
+            <li><Link to="/reportfditem">Report Found Items</Link></li>
+            <li><Link to="/postitem" >Postitems</Link></li>
+          </ul>
         </div>
       </nav>
-    </>
-
+      </>
   )
 }
