@@ -1,8 +1,7 @@
-import React,{useState} from 'react'
+import React from 'react'
 import './styles/Navbar2.css'
 import Content from './Content';
 import Catories from './Catories';
-import Recentlost from './Recentlost'
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 
@@ -21,7 +20,7 @@ function App() {
       </div>
     </section>
     <Content className="my-5"/>
-    <h1 style={{ textAlign: "center", color: "#000" }} className="underline">CATEGORIES</h1>
+    <h1 style={{ textAlign: "center", color: "#000" , marginTop:"15vh" }} className="underline">CATEGORIES</h1>
     <div className='Difix'>
       
     <Catories  image={'https://th.bing.com/th?id=OIP.AS3D4eXkG2P4hKC8kSnfDQHaGb&w=268&h=232&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Identity Cards" />
@@ -33,32 +32,6 @@ function App() {
     <Catories image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
     <Catories image={'https://security.si.edu/sites/default/files/inline-images/lostandfound.png'} content_text="Others Items"/>
     </div>
-    <h1 style={{ textAlign: "center", color: "#000" }} className="underline  my-2">RECENT LOST</h1>
-    <div className='Difix'>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      <Recentlost image={'https://security.si.edu/sites/default/files/inline-images/lostandfound.png'} content_text="Others Items"/>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      </div>
-      <div className='Difix'>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      </div>
-      <h1 style={{ textAlign: "center", color: "#000" }} className="underline  my-2">All LOST</h1>
-      <div className='Difix'>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      <Recentlost image={'https://security.si.edu/sites/default/files/inline-images/lostandfound.png'} content_text="Others Items"/>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      </div>
-      <div className='Difix'>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      <Recentlost image={'https://th.bing.com/th?id=OIP.AtgTEKL9QqyZDbhStschRwHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'} content_text="Toys"/>
-      </div>
       
     </>
   );

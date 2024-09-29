@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Card(props) {
   return (
-    <div className="col-sm-6">
+    <div className="col-sm-6 my-3">
       <div className="card">
         <div className="card-body" style={{ marginRight: "5px", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
           <div className='Pic' style={{ border: "1px solid black", height: "80px", width: "80px", borderRadius: "50%" }}>
