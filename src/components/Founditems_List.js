@@ -9,7 +9,7 @@ export default function Founditems_List() {
     getdata()
   },[])
   const getdata= ()=>{
-    api.get('api/found-item/').then((res)=>res.data).then((data)=>{setdata(data);console.log(data)}).catch((error)=>alert(error))
+    api.get('api/found-item/').then((res)=>res.data).then((data)=>{setdata(data)}).catch((error)=>alert(error))
     
   }
   return (
@@ -18,7 +18,7 @@ export default function Founditems_List() {
       <div className="box">
         {
                 data.map((element) => {
-                  console.log(element);
+                  
                   return (
                     <div key={element.id}>
                       <Details discription={element.description} src={element.img} name={element.name} address={element.address} phone={element.phone_no} />

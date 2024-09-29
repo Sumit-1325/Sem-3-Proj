@@ -13,6 +13,12 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
  import ProtectedRoute from './components/protectedroutes';
  import Frontpage from './components/Frontpage';
 import LearnMore from './components/LearnMore';
+import Book_List from './components/Book_List';
+import Digital_Devices_List from './components/Digital_Devices_List';
+import Identity_Cards_List from './components/Identity_Cards_List';
+import Others_Items_List from './components/Others_Items_List';
+import Wallets_List from './components/Wallets_List';
+import Toys_List from './components/Toys_List';
 
 function Logout(){
   localStorage.clear()
@@ -49,6 +55,12 @@ export default function App() {
           <Route path="/Signup" element={<Signup />} /> 
          <Route path="/reportfditem" element={ <ProtectedRoute> <Uploadpage/> </ProtectedRoute> } /> 
          <Route path="/founditem" element={ <ProtectedRoute> <Founditems_List/> </ProtectedRoute> }/>  
+         <Route path="/founditem/Books" element={ <ProtectedRoute> <Book_List/> </ProtectedRoute> }/>  
+         <Route path="/founditem/Identity-Cards" element={ <ProtectedRoute> <Identity_Cards_List/> </ProtectedRoute> }/>  
+         <Route path="/founditem/Wallets" element={ <ProtectedRoute> <Wallets_List/> </ProtectedRoute> }/>  
+         <Route path="/founditem/Digital-Devices" element={ <ProtectedRoute> <Digital_Devices_List/> </ProtectedRoute> }/>  
+         <Route path="/founditem/Toys" element={ <ProtectedRoute> <Toys_List/> </ProtectedRoute> }/>  
+         <Route path="/founditem/Others-Items" element={ <ProtectedRoute> <Others_Items_List/> </ProtectedRoute> }/>  
         <Route path="/postitem" element={ <ProtectedRoute> <PostItems/> </ProtectedRoute> }/>  
         <Route path="/learnmore" element={<LearnMore />} /> 
 {/* 
