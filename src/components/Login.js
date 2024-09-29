@@ -22,7 +22,7 @@ export default function Login() {
       const res = await api.post('api/token/',{username,password})
       localStorage.setItem(ACCESS_TOKEN,res.data.access)
       localStorage.setItem(REFRESH_TOKEN,res.data.refresh)
-      navigate('/')
+      navigate('/Home')
     }catch(error){
       alert(error)
     }

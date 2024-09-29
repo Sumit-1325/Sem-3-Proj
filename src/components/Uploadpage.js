@@ -3,17 +3,48 @@ import { useState } from 'react'
 import './styles/upload.css'
 import { MdCloudUpload, MdDelete } from 'react-icons/md'
 import { AiFillFileImage } from "react-icons/ai";
+import api from '../api';
+import { useNavigate } from 'react-router-dom';
 export default function Uploadpage() {
 
   const [image, setImage] = useState(null)
+  const [img, setimg] = useState(null)
   const [filename, setFileName] = useState("No selected file")
-
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [address, setaddress] = useState('');
+  const [keyword, setkeyword] = useState('');
   const [phone, setPhone] = useState('');
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const value = e.target.value;
     if (/^\d*$/.test(value) && value.length <= 10) {
       setPhone(value);
+    }
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('address', address);
+    formData.append('phone_no', phone);
+    formData.append('keywords', keyword);
+    formData.append('description', description);
+    formData.append('img', img);
+    try {
+      
+      const response =  await  api.post('api/found-item/', formData, {
+        headers: {
+            'Content-Type': 'multipart/form-data'
+        }
+    });      
+      if (response.status===201) {
+        navigate('/Home');
+      } else {
+        alert('post failed');
+      }
+    } catch (error) {
+      console.error('Error:', error);
     }
   };
 
@@ -45,15 +76,20 @@ border-radius: 5px;
 
       <div className='outer'>
         <div className='inner'>
-          <form>
+          <form onSubmit={handleSubmit}>
 
             <h1 style={{ textAlign: 'center', color: "black" }}>Report Found Item Here ...</h1>
-            <label className='Align' htmlFor="Founditem "><h4>Describe Item found:</h4></label>
-            <input type="Founditem  " id="Founditem" name="Founditem" placeholder="(Object Name)." />
-
+            <div>
+            <label className='Align' htmlFor="Founditem "><h4> Object found:</h4></label>
+            <input type="text" id="Founditem" name="Founditem" placeholder=" Found Object Name." value={name} onChange={(e) => setName(e.target.value)} />
+            <label className='Align' htmlFor="Founditem "><h4>Describe Object found:</h4></label>
+            <input type="text" id="Founditem" name="Founditem" placeholder=" Describe Object Name."  value={description} onChange={(e) => setDescription(e.target.value)}/>
+            </div>
+            <label className='Align' htmlFor="Keywords "><h4>Keywords:</h4></label>
+            <input type="text" id="Keywords" name="Keywords" placeholder="Keywords For objects."  value={keyword} onChange={(e) => setkeyword(e.target.value)} />
             <div>
               <label className="Align " htmlFor="description"><h4>Describe Where Items Found:</h4></label>
-              <textarea id="" placeholder="where Do you find Object"></textarea>
+              <textarea id="" placeholder="where Do you find Object"  value={address} onChange={(e) => setaddress(e.target.value)}></textarea>
             </div>
 
             <label className="Align" htmlFor="phone"><h4>Enter your phone number:</h4></label>
@@ -82,7 +118,9 @@ border-radius: 5px;
                   files[0] && setFileName(files[0].name)
                   if (files) {
                     setImage(URL.createObjectURL(files[0]))
+                    setimg(files[0])
                   }
+                  
                 }} />
 
                 {image ? <img src={image} width={150} height={150} alt={filename} />
@@ -106,7 +144,7 @@ border-radius: 5px;
                 </span>
               </section>
 
-              <button className="btn btn-primary btn-lg my-4" type="submit">Submit</button>
+              <button className="btn btn-primary btn-lg my-4" type="submit" value='submit'>Submit</button>
               <button className="btn btn-primary btn-lg mx-5" type="reset "> Reset </button>
             </div>
 

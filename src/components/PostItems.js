@@ -91,7 +91,10 @@ export default function PostItems() {
               required
             />
             <label className='Align' htmlFor="Lostplace"><h4>Where Do Think  You Lost:</h4></label>
-            <input type="text" id="Lostplace" name="Lostplace" placeholder="Enter Class No or Wherever You Lost." />
+            <input type="text" id="Lostplace" name="Lostplace" placeholder="Enter  Wherever You Lost." />
+            <label className='Align' htmlFor="Keywords"><h4>Keywords:</h4></label>
+            <input type="text" id="Keywords" name="Lostplace" placeholder="Keywords For your Objects." />
+            
             <label className='Align' htmlFor="Lostdate"><h4>Date When Your Item Lost:</h4></label>
 
             <DatePicker

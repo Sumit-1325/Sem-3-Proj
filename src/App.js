@@ -42,7 +42,7 @@ export default function App() {
         
         <Routes>
         <Route path="/" element={<Frontpage/>}/>
-        <Route path='/Home' element={<Navbar2/>}></Route>
+        <Route path='/Home' element={<ProtectedRoute><Navbar2/> </ProtectedRoute> } />
         
          {/* <Route path="Home" element={ <ProtectedRoute> <Home /> </ProtectedRoute> } />  */}
           <Route path="/login" element={<Login />} /> 
