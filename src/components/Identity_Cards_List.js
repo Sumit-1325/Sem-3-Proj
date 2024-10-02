@@ -17,7 +17,7 @@ export default function Identity_Cards_List() {
       .then((data) => {
         setdata(data);
         const Counted = data.reduce((acc, element) => {
-          return acc + (element.name.toLowerCase() === 'document' ? 1 : 0);
+          return acc + (element.keywords.toLowerCase() === 'documents' ? 1 : 0);
         }, 0);
 
         setcount(Counted);
@@ -33,8 +33,8 @@ export default function Identity_Cards_List() {
           <h3>NO ITEM TO DISPLAY</h3>
         ) : (
           data.map((element) => {
-            const name = element.name.toLowerCase();
-            if (name === 'document') {
+            const name = element.keywords.toLowerCase();
+            if (name === 'documents') {
               return (
                 <div key={element.id}>
                   <Details description={element.description} src={element.img} name={element.name} address={element.address} phone={element.phone_no} />

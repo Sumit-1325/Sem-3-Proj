@@ -17,7 +17,7 @@ export default function Wallets_List() {
       .then((data) => {
         setdata(data);
         const bookCount = data.reduce((acc, element) => {
-          return acc + (element.name.toLowerCase() === 'wallet' ? 1 : 0);
+          return acc + (element.keywords.toLowerCase() === 'wallets' ? 1 : 0);
         }, 0);
 
         setcount(bookCount);
@@ -33,8 +33,8 @@ export default function Wallets_List() {
           <h3>NO ITEM TO DISPLAY</h3>
         ) : (
           data.map((element) => {
-            const name = element.name.toLowerCase();
-            if (name === 'wallet') {
+            const name = element.keywords.toLowerCase();
+            if (name === 'wallets') {
               return (
                 <div key={element.id}>
                   <Details description={element.description} src={element.img} name={element.name} address={element.address} phone={element.phone_no} />

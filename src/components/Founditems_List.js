@@ -9,7 +9,8 @@ export default function Founditems_List() {
     getdata()
   },[])
   const getdata= ()=>{
-    api.get('api/found-item/').then((res)=>res.data).then((data)=>{setdata(data)}).catch((error)=>alert(error))
+    api.get('api/found-item/').then((res)=>res.data).then((data)=>{setdata(data);
+     }).catch((error)=>alert(error))
     
   }
   return (

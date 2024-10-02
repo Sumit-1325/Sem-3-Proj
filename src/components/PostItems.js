@@ -3,15 +3,11 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css"
 import './styles/Postitem.css'
-import { MdCloudUpload, MdDelete } from 'react-icons/md'
-import { AiFillFileImage } from "react-icons/ai";
 import'./styles/upload.css'
 
 export default function PostItems() {
 
-  const [image, setImage] = useState(null)
-  const [filename, setFileName] = useState("No selected file")
-
+  
 
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -92,8 +88,6 @@ export default function PostItems() {
             />
             <label className='Align' htmlFor="Lostplace"><h4>Where Do Think  You Lost:</h4></label>
             <input type="text" id="Lostplace" name="Lostplace" placeholder="Enter  Wherever You Lost." />
-            <label className='Align' htmlFor="Keywords"><h4>Keywords:</h4></label>
-            <input type="text" id="Keywords" name="Lostplace" placeholder="Keywords For your Objects." />
             
             <label className='Align' htmlFor="Lostdate"><h4>Date When Your Item Lost:</h4></label>
 
@@ -107,38 +101,7 @@ export default function PostItems() {
               maxDate={maxDate}
             />
             <div>
-              <label className='Align' htmlFor="upload"><h4>Please upload the picture of lost object:</h4></label>
-
-              <div className='height'
-                onClick={() => document.querySelector(".input-field").click()}
-              >
-                <input type="file" accept="image/*" className='input-field' onChange={({ target: { files } }) => {
-                  files[0] && setFileName(files[0].name)
-                  if (files) {
-                    setImage(URL.createObjectURL(files[0]))
-                  }
-                }} />
-
-                {image ? <img src={image} width={150} height={150} alt={filename} />
-                  :
-                  <>
-                    <MdCloudUpload color='black' size={60} />
-                    <p>Browse Files To Upload</p>
-                  </>}
-              </div>
-
-              <section className='uploaded-row'>
-                <AiFillFileImage color='black' />
-                <span className='upload-content'>
-                  {filename}
-                  <MdDelete
-                    onClick={() => {
-                      setFileName("No selected File")
-                      setImage(null)
-
-                    }} />
-                    </span>
-                    </section>
+              
           
                     <button className="btn btn-primary btn-lg my-4" type="submit">Submit</button>
                     <button className="btn btn-primary btn-lg mx-5" type="reset "> Reset </button>

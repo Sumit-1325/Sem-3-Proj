@@ -1,15 +1,19 @@
+*{
+  margin: 0;
+  padding: 0%;
+}
 .outer {
     position: absolute;
     /* top: 60px;  */
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 100vw;
     height: auto;
-    /* background-color: #fff; */
+    background: linear-gradient(#D5A3FF 0%, #77A5F8 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:20px;
+    /* margin:20px; */
     
   }
   

@@ -1,7 +1,7 @@
 import React from 'react';
 //  import Navbar from './components/Navbar';
 import './App.css';
-import Navbar2 from './components/Navbar2';
+import Home from './components/Home';
 //  import Content from './components/Content';
 import Login from './components/Login';
  import Signup from './components/Signup';
@@ -19,6 +19,7 @@ import Identity_Cards_List from './components/Identity_Cards_List';
 import Others_Items_List from './components/Others_Items_List';
 import Wallets_List from './components/Wallets_List';
 import Toys_List from './components/Toys_List';
+import AboutUs from './components/AboutUs';
 
 function Logout(){
   localStorage.clear()
@@ -48,7 +49,7 @@ export default function App() {
         
         <Routes>
         <Route path="/" element={<Frontpage/>}/>
-        <Route path='/Home' element={<ProtectedRoute><Navbar2/> </ProtectedRoute> } />
+        <Route path='/Home' element={<ProtectedRoute><Home/> </ProtectedRoute> } />
         
          {/* <Route path="Home" element={ <ProtectedRoute> <Home /> </ProtectedRoute> } />  */}
           <Route path="/login" element={<Login />} /> 
@@ -56,13 +57,14 @@ export default function App() {
          <Route path="/reportfditem" element={ <ProtectedRoute> <Uploadpage/> </ProtectedRoute> } /> 
          <Route path="/founditem" element={ <ProtectedRoute> <Founditems_List/> </ProtectedRoute> }/>  
          <Route path="/founditem/Books" element={ <ProtectedRoute> <Book_List/> </ProtectedRoute> }/>  
-         <Route path="/founditem/Identity-Cards" element={ <ProtectedRoute> <Identity_Cards_List/> </ProtectedRoute> }/>  
+         <Route path="/founditem/Documents" element={ <ProtectedRoute> <Identity_Cards_List/> </ProtectedRoute> }/>  
          <Route path="/founditem/Wallets" element={ <ProtectedRoute> <Wallets_List/> </ProtectedRoute> }/>  
          <Route path="/founditem/Digital-Devices" element={ <ProtectedRoute> <Digital_Devices_List/> </ProtectedRoute> }/>  
          <Route path="/founditem/Toys" element={ <ProtectedRoute> <Toys_List/> </ProtectedRoute> }/>  
          <Route path="/founditem/Others-Items" element={ <ProtectedRoute> <Others_Items_List/> </ProtectedRoute> }/>  
         <Route path="/postitem" element={ <ProtectedRoute> <PostItems/> </ProtectedRoute> }/>  
         <Route path="/learnmore" element={<LearnMore />} /> 
+        <Route path="/AboutUs" element={<AboutUs />} /> 
 {/* 
           <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />   */}

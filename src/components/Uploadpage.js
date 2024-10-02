@@ -80,13 +80,22 @@ border-radius: 5px;
 
             <h1 style={{ textAlign: 'center', color: "black" }}>Report Found Item Here ...</h1>
             <div>
+            <label className="Align" htmlFor="lost-itm"><h4>Type of object Found:</h4></label>
+            <select name="Keywords" id="Keywords"  value={keyword} onChange={(e) => setkeyword(e.target.value)}>
+              <option value="Select Item Type">Select Item Type</option>
+              <option value="Identity-Cards">Documents</option>
+              <option value="Wallets">Wallets</option>
+              <option value="Devices">Digital-Devices</option>
+              <option value="Books">Book</option>
+              <option value="Toys">Toys</option>
+              <option value="Other items">Others-Items (Describe Below)</option>
+            </select>
             <label className='Align' htmlFor="Founditem "><h4> Object found:</h4></label>
-            <input type="text" id="Founditem" name="Founditem" placeholder=" Found Object Name." value={name} onChange={(e) => setName(e.target.value)} />
+            <input type="text" id="Founditem" name="Founditem" placeholder=" (For Other Objects)." value={name} onChange={(e) => setName(e.target.value)} />
             <label className='Align' htmlFor="Founditem "><h4>Describe Object found:</h4></label>
-            <input type="text" id="Founditem" name="Founditem" placeholder=" Describe Object Name."  value={description} onChange={(e) => setDescription(e.target.value)}/>
+            <input type="text" id="Founditem" name="Founditem" placeholder=" Describe Object Name  ( For eg. CompanyName, colors , any marking etc.)"  value={description} onChange={(e) => setDescription(e.target.value)}/>
             </div>
-            <label className='Align' htmlFor="Keywords "><h4>Keywords:</h4></label>
-            <input type="text" id="Keywords" name="Keywords" placeholder="Keywords For objects."  value={keyword} onChange={(e) => setkeyword(e.target.value)} />
+           
             <div>
               <label className="Align " htmlFor="description"><h4>Describe Where Items Found:</h4></label>
               <textarea id="" placeholder="where Do you find Object"  value={address} onChange={(e) => setaddress(e.target.value)}></textarea>
@@ -109,7 +118,7 @@ border-radius: 5px;
 
             {/* <div className=" upload-form"> */}
             <div>
-              <label className='Align' htmlFor="upload"><h4>Please upload the picture of lost object:</h4></label>
+              <label className='Align' htmlFor="upload"><h4>Please upload the picture of Found object:</h4></label>
 
               <div className='height'
                 onClick={() => document.querySelector(".input-field").click()}
